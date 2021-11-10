@@ -1,0 +1,14 @@
+﻿(1) Em orientação a objetos, é melhor:
+
+(a) Usar uma interface ou uma classe abstrata ? Por que? Cite exemplos:
+A interface é apenas um contrato que diz o que a classe deve implementar.
+A classe abstrata além de já oferecer abstrações (métodos implementados) ainda permite que você sobrescreva os métodos para mudar o comportamento da classe base.
+As duas opções são válidas, porém cabe ao desenvolvedor identificar qual é a melhor implementação conforme o cenário.
+Ex.: estão na pasta "a" neste projeto.
+
+
+(b) Usar herança ou delegação a outros objetos? Por que ? Cite exemplos:
+A utilização de herança normalmente se dá utilizando o termo "é um", isto é válido e não pode deformar a proposta da class "pai" para atender requisitos da classe "filha".
+A delegação utiliza a instancia de um objeto e tem acesso ao que for de uso publico, esta instancia pode ser criada na própria classe ou injetada.
+Neste caso podemos utilizar apenas os comportamentos necessários, sem precisar utilizar a classe "pai" por completo. 
+Ex.: estão na pasta "b" neste projeto.
