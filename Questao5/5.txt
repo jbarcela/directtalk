@@ -1,0 +1,15 @@
+5) Levando em consideranção o contexto da questão, 
+usaria uma estrutura de "lock" do C# para prevenir que a mesma conta fosse debitada mais de uma vez por Threds diferentes, 
+o que pode acontecer com o código atual. Com o código atual é possível que duas Threds passem pelo if antes da primeira finalizar e "atualizar" a conta com o débito.
+Para resolver este problema:
+
+private readonly object LockConta = new object();
+
+public void debitar(long idConta, double valor) {
+    Conta conta = contaDao.buscaConta(idConta);
+    lock(LockConta){
+        if(conta.podeDebitar(valor)) {
+            ...resto do código
+        }
+    }
+}

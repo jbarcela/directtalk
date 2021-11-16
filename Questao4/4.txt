@@ -1,0 +1,7 @@
+a) Sim, quando há necessidade de customizar a criação da Exception, seja a mensagem ou o próprio objeto gerado. 
+É utilizado, normalmente, para criar uma Exception conhecida do sistema, que ajude o usuário a identificar o motivo.
+
+b) Capturaria a exception para adicionar um tratamento, lançar um retorno especifico para API ou para lançar uma exception customizada. 
+Fazendo isso evita-se que a aplicação lance uma Exception com erros não tratados. 
+
+c) Quando não existe a possibilidade de tratamento via código. Exemplo na pasta "c".
